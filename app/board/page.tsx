@@ -10,9 +10,9 @@ const INKS = {
 };
 
 const SECTIONS = [
-  { bucket: "worth_your_time", label: "Worth your time" },
-  { bucket: "maybe", label: "Maybe" },
-  { bucket: "pass", label: "A kind no" },
+  { bucket: "worth_your_time", label: "Shortlist" },
+  { bucket: "maybe", label: "Worth a look" },
+  { bucket: "pass", label: "Keep for later" },
 ] as const;
 
 export default function BoardPage() {
@@ -25,10 +25,10 @@ export default function BoardPage() {
     <main style={{ maxWidth: "56rem", margin: "0 auto", padding: "2.5rem 1.25rem" }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "1rem" }}>
         <div>
-          <h1 style={{ fontSize: "2rem", fontWeight: 600, margin: 0 }}>Re:ply</h1>
-          <p style={{ color: "var(--muted-foreground)", marginTop: "0.25rem" }}>Inbound that answers everyone.</p>
+          <h1 style={{ fontSize: "2rem", fontWeight: 600, margin: 0 }}>Sift</h1>
+          <p style={{ color: "var(--muted-foreground)", marginTop: "0.25rem" }}>The right candidates, without reading the pile.</p>
         </div>
-        <a href="/" style={{ color: "var(--primary)", fontSize: "0.875rem", whiteSpace: "nowrap" }}>Talk to Re:ply →</a>
+        <a href="/" style={{ color: "var(--primary)", fontSize: "0.875rem", whiteSpace: "nowrap" }}>Talk to Sift →</a>
       </div>
 
       {board && board.entries.length === 0 && (
@@ -53,7 +53,7 @@ export default function BoardPage() {
       })}
 
       <footer style={{ marginTop: "3rem", fontFamily: "var(--serif)", fontStyle: "italic", color: "var(--muted-foreground)" }}>
-        made by <a href="https://rwhq.io/reply" style={{ color: "var(--primary)" }}>Re:Work</a>. want the human version?
+        made by <a href="https://rwhq.io/sift" style={{ color: "var(--primary)" }}>Re:Work</a>. want the human version?
       </footer>
     </main>
   );

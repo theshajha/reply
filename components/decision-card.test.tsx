@@ -16,7 +16,7 @@ const inks = { screener: "#1", researcher: "#2", responder: "#3" };
 describe("DecisionCard", () => {
   it("formats the bucket into plain English, not the enum", () => {
     render(<DecisionCard entry={entry as any} inks={inks} />);
-    expect(screen.getByText("Worth your time")).toBeInTheDocument();
+    expect(screen.getByText("Shortlist")).toBeInTheDocument();
     expect(screen.queryByText("worth_your_time")).not.toBeInTheDocument();
   });
   it("shows the applicant, reason, context, and drafted reply", () => {

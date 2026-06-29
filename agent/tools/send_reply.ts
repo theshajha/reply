@@ -7,7 +7,7 @@ import type { Preferences } from "@/lib/schema/preferences";
 
 export function assertSendAllowed(preferences: Preferences): void {
   if (!preferences.send) {
-    throw new Error("Sending is off. Re:ply creates a Gmail draft you send yourself. Turn on send in yours/preferences.json (or re-run onboarding) to send directly.");
+    throw new Error("Sending is off. Sift creates a Gmail draft you send yourself. Turn on send in yours/preferences.json (or re-run onboarding) to send directly.");
   }
 }
 

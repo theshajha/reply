@@ -1,9 +1,9 @@
 import type { BoardEntry, AgentId } from "@/lib/schema/board";
 
 const BUCKET_LABEL: Record<string, string> = {
-  worth_your_time: "Worth your time",
-  maybe: "Maybe",
-  pass: "A kind no",
+  worth_your_time: "Shortlist",
+  maybe: "Worth a look",
+  pass: "Keep for later",
 };
 
 export function DecisionCard({ entry, inks }: { entry: BoardEntry; inks: Record<AgentId, string> }) {

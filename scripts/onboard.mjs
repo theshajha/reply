@@ -29,7 +29,7 @@ const rl = createInterface({ input: process.stdin, output: process.stdout });
 const ask = async (q, d) => (await rl.question(`${q}${d ? ` (${d})` : ""}: `)) || d;
 
 (async () => {
-  console.log("\nRe:ply onboarding. This writes to yours/ only; pull updates anytime without conflicts.\n");
+  console.log("\nSift onboarding. This writes to yours/ only; pull updates anytime without conflicts.\n");
   const created = scaffoldYours(join(process.cwd(), "yours.example"), join(process.cwd(), "yours"));
   console.log(created ? "Created yours/ from the templates." : "yours/ already exists, leaving it alone.");
 
