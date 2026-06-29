@@ -43,7 +43,7 @@ export async function listInbound(gmail: GmailApi, label: string): Promise<Inbou
     const { name, email } = parseFrom(header(headers, "From"));
     const subject = header(headers, "Subject");
     const raw = msg.data.payload?.body?.data ?? "";
-    const message = raw ? Buffer.from(raw, "base64").toString("utf8") : "";
+    const message = raw ? Buffer.from(raw, "base64url").toString("utf8") : "";
     out.push(InboundCandidate.parse({
       id: createHash("sha1").update(`${email}|${subject}`).digest("hex").slice(0, 12),
       name, contact: email, roleAppliedFor: subject, message,

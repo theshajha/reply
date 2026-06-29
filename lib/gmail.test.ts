@@ -13,7 +13,7 @@ function fakeGmail() {
                 { name: "From", value: "Ada <ada@x.com>" },
                 { name: "Subject", value: "Backend Engineer" },
               ],
-              body: { data: Buffer.from("GitHub https://github.com/ada").toString("base64") },
+              body: { data: Buffer.from("Test?? https://github.com/ada").toString("base64url") },
             },
           },
         }),
@@ -27,6 +27,7 @@ describe("gmail wrapper", () => {
   it("maps messages into InboundCandidate with extracted links", async () => {
     const gmail = fakeGmail() as any;
     const rows = await listInbound(gmail, "INBOX");
+    expect(rows[0].message).toContain("Test??");
     expect(rows[0].contact).toBe("ada@x.com");
     expect(rows[0].name).toBe("Ada");
     expect(rows[0].links).toContain("https://github.com/ada");
