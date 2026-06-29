@@ -6,8 +6,8 @@ import { ingestFile } from "@/agent/tools/ingest_file";
 
 let dir: string;
 beforeEach(() => {
-  dir = mkdtempSync(join(tmpdir(), "reply-"));
-  process.env.REPLY_YOURS_DIR = dir;
+  dir = mkdtempSync(join(tmpdir(), "sift-"));
+  process.env.SIFT_YOURS_DIR = dir;
   mkdirSync(join(dir, "inbound"), { recursive: true });
   writeFileSync(join(dir, "inbound", "a.csv"),
     "name,contact,role,message,received_at\nAda,ada@x.com,Eng,hi,2026-06-20T00:00:00Z\n");

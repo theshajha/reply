@@ -17,7 +17,7 @@ describe("buildPreferences", () => {
 
 describe("scaffoldYours", () => {
   let root: string;
-  beforeEach(() => { root = mkdtempSync(join(tmpdir(), "reply-")); mkdirSync(join(root, "yours.example")); writeFileSync(join(root, "yours.example", "role.md"), "x"); });
+  beforeEach(() => { root = mkdtempSync(join(tmpdir(), "sift-")); mkdirSync(join(root, "yours.example")); writeFileSync(join(root, "yours.example", "role.md"), "x"); });
   afterEach(() => rmSync(root, { recursive: true, force: true }));
   it("creates yours/ when missing and is a no-op when present", () => {
     expect(scaffoldYours(join(root, "yours.example"), join(root, "yours"))).toBe(true);

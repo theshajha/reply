@@ -8,7 +8,7 @@ import { readBoard } from "@/lib/yours";
 import { BoardEntry } from "@/lib/schema/board";
 
 let dir: string;
-beforeEach(() => { dir = mkdtempSync(join(tmpdir(), "reply-")); process.env.REPLY_YOURS_DIR = dir; });
+beforeEach(() => { dir = mkdtempSync(join(tmpdir(), "sift-")); process.env.SIFT_YOURS_DIR = dir; });
 afterEach(() => rmSync(dir, { recursive: true, force: true }));
 
 const entry: z.input<typeof BoardEntry> = {

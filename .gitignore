@@ -10,7 +10,7 @@ dist
 .DS_Store
 *.tsbuildinfo
 
-# Re:ply: the operator's private layer (never committed)
+# Sift: the operator's private layer (never committed)
 yours/
 
 # subagent-driven-development progress ledger (scratch)

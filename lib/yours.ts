@@ -4,7 +4,7 @@ import { Board } from "./schema/board";
 import { Preferences } from "./schema/preferences";
 
 export function yoursDir(): string {
-  return process.env.REPLY_YOURS_DIR ?? join(process.cwd(), "yours");
+  return process.env.SIFT_YOURS_DIR ?? join(process.cwd(), "yours");
 }
 
 export function readBoard(): Board {

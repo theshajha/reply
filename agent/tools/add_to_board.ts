@@ -17,7 +17,7 @@ export async function addToBoard(input: z.input<typeof Input>): Promise<{ count:
 }
 
 export default defineTool({
-  description: "Add or update one applicant on the triage board (worth_your_time / maybe / pass), with the screener reason, optional research context, and the drafted reply.",
+  description: "Add or update one applicant on the triage board (worth_your_time / maybe / pass), with the screener reason, optional research context, and an optional drafted message.",
   inputSchema: Input,
   execute: addToBoard,
 });

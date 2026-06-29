@@ -6,7 +6,7 @@ import { addToPool } from "@/agent/tools/add_to_pool";
 import { readPool } from "@/lib/pool";
 
 let dir: string;
-beforeEach(() => { dir = mkdtempSync(join(tmpdir(), "sift-")); process.env.REPLY_YOURS_DIR = dir; });
+beforeEach(() => { dir = mkdtempSync(join(tmpdir(), "sift-")); process.env.SIFT_YOURS_DIR = dir; });
 afterEach(() => rmSync(dir, { recursive: true, force: true }));
 
 describe("add_to_pool", () => {

@@ -6,7 +6,7 @@ import type { Pool } from "./schema/pool";
 import { personId, readPool, writePool, upsertPerson, type PersonSighting } from "./pool";
 
 let dir: string;
-beforeEach(() => { dir = mkdtempSync(join(tmpdir(), "sift-")); process.env.REPLY_YOURS_DIR = dir; });
+beforeEach(() => { dir = mkdtempSync(join(tmpdir(), "sift-")); process.env.SIFT_YOURS_DIR = dir; });
 afterEach(() => rmSync(dir, { recursive: true, force: true }));
 
 const sighting = (over: Partial<PersonSighting> = {}): PersonSighting => ({
