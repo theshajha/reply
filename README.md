@@ -13,7 +13,7 @@ Made by [Re:Work](https://rwhq.io). If you would rather someone just ran your hi
 ## What it does
 
 - **Shortlist.** Sift reads the whole pile and puts the people worth your time at the top, each with one plain line on why. Minutes, not an afternoon.
-- **Keep everyone.** Nobody good gets lost. Each applicant who is not right for this role is kept and tagged for what they might be right for: a different level, a role you open next quarter. Your inbound becomes a list that gets easier to stay on top of, not harder.
+- **Keep everyone, across rounds.** Nobody good gets lost. Each applicant who is not right for this role is kept and tagged for what they might be right for: a different level, a role you open next quarter. The pool persists between hires, so the strong applicant from last time is the first name Sift surfaces the next time you run it. Your inbound becomes a list that gets easier to stay on top of, not harder.
 - **Reach out when you want.** When you are ready to talk to someone, Sift drafts the message in your voice and you send it. That part is optional, and it comes last, not first.
 
 Built as an agent, so the real work lives in plain-language instructions you can read and change.
@@ -27,7 +27,7 @@ npm run onboard          # sets up yours/: your role, your rubric, your preferen
 npx eve dev              # talk to Sift, then type: run
 ```
 
-Then open `/board` to see your shortlist, the maybes, and everyone you are keeping for later.
+Then open `/board` to see this run's shortlist and maybes, and `/pool` to see everyone you are keeping across rounds.
 
 ## Your layer
 

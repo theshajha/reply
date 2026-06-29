@@ -28,7 +28,10 @@ export default function BoardPage() {
           <h1 style={{ fontSize: "2rem", fontWeight: 600, margin: 0 }}>Sift</h1>
           <p style={{ color: "var(--muted-foreground)", marginTop: "0.25rem" }}>Spend more time talking to the right candidates.</p>
         </div>
-        <a href="/" style={{ color: "var(--primary)", fontSize: "0.875rem", whiteSpace: "nowrap" }}>Talk to Sift →</a>
+        <div style={{ display: "flex", gap: "1.25rem", whiteSpace: "nowrap" }}>
+          <a href="/pool" style={{ color: "var(--primary)", fontSize: "0.875rem" }}>Your pool →</a>
+          <a href="/" style={{ color: "var(--primary)", fontSize: "0.875rem" }}>Talk to Sift →</a>
+        </div>
       </div>
 
       {board && board.entries.length === 0 && (

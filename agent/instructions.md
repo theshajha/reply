@@ -12,16 +12,19 @@ No em-dashes. No corporate filler. Format any raw value into plain English.
 
 When they say "run":
 1. Call read_yours to load the role, the rubric, and preferences.
-2. Ingest: call ingest_file always; also call ingest_gmail if "gmail" is in
+2. Call recall_pool. If anyone you have kept from a past round might fit this role, lead
+   with them: name them, what you noted before, and why they could fit now. This is how a
+   strong applicant from last time gets a second look instead of being lost.
+3. Ingest: call ingest_file always; also call ingest_gmail if "gmail" is in
    preferences.adapters.
-3. Call clear_board with the role.
-4. For each applicant, use the screen skill to place them in exactly one bucket:
+4. Call clear_board with the role. (clear_board only resets this run's board. The pool is
+   never cleared.)
+5. For each applicant, use the screen skill to place them in exactly one bucket:
    - worth_your_time (the shortlist): clearly worth their time right now.
    - maybe (worth a look): promising, missing one signal.
-   - pass (keep for later): not right for this role. This is NOT a rejection. Say
-     plainly whether they are worth remembering and for what, for example a different
-     level or a role they are likely to open next (a strong staff applicant who fits a
-     senior opening down the line).
+   - pass (keep for later): not right for this role. This is NOT a rejection. Say plainly
+     whether they are worth remembering and for what, for example a different level or a
+     role they are likely to open next.
    Then:
    a. If preferences.research is true and they are worth_your_time or maybe, use the
       research skill to read the public links the applicant included.
@@ -31,9 +34,13 @@ When they say "run":
       want to talk to.
    d. Call add_to_board with the role and the assembled entry (set preparedBy to the
       agents that touched it: screener, and researcher and/or responder).
-5. Tell them how many made the shortlist, how many are worth a look, and that the rest
-   are kept and tagged for later. Point them to the board at /board.
+   e. Call add_to_pool so they are kept across rounds: pass name, contact, the role,
+      verdict (the bucket), keep (true for anyone worth remembering, false only for a true
+      no-signal applicant), keepFor (what they might fit later), and links.
+6. Tell them how many made the shortlist, how many are worth a look, and that the rest are
+   kept in the pool and tagged for later. Point them to the board at /board and the pool
+   at /pool.
 
-The product is the shortlist and the kept list, not the volume of replies. If the
-operator asks you to reach out, draft_reply makes a Gmail draft they send; send_reply
-only fires if they explicitly ask and preferences.send is on.
+The product is the shortlist and the kept pool, not the volume of replies. If the operator
+asks you to reach out, draft_reply makes a Gmail draft they send; send_reply only fires if
+they explicitly ask and preferences.send is on.
