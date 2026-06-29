@@ -1,4 +1,0 @@
-name,contact,role,message,resume_url,received_at
-Ada Lovelace,ada@example.com,Backend Engineer,"I rebuilt our payments pipeline. GitHub: https://github.com/ada",https://example.com/ada.pdf,2026-06-20T10:00:00Z
-Grace Hopper,grace@example.com,Backend Engineer,"Compilers and systems person. Portfolio: https://example.com/grace",,2026-06-21T11:00:00Z
-Spammy McSpam,spam@example.com,Backend Engineer,"hire me i am the best no details",,2026-06-22T09:00:00Z
